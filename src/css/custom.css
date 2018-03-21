@@ -16,21 +16,125 @@ line height is 20px by default so add 30px top and bottom to equal the new .navb
     margin: 25px 15px 25px 0;
 }
 
+.example3 a {
+    color: #252525;
+}
 
 nav{
     background: #fff;
 }
 
 .navbar-brand img {
-    width: 200px;
+    width: 100px;
     height: 25px;
     margin-top: 14px;
 }
 
-.navbar-collapse{
+.navbar{
     border-bottom: 1px solid #D7D8D6;
 }
 
+.nav>li>a {
+
+    border-right: 1px solid #f3f3f3;
+}
+
+.nav>li:last-child > a {
+    border: none;
+}
+
+.main-nav{
+    margin-bottom: 0;
+}
+
+
 body{
     background: #fff;
+}
+
+
+/*Button*/
+
+.btn-primary {
+    color: #fff;
+    background-color: #db0011;
+    border-color: transparent;
+    border-radius: 0;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #a8000b;
+    border-color: transparent;
+}
+
+.btn-primary.focus, .btn-primary:focus {
+    color: #fff;
+    background-color: #a8000b;
+    border-color: transparent;
+}
+
+.btn-primary.active, .btn-primary:active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #a8000b;
+    border-color: transparent;
+}
+
+.btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .open>.dropdown-toggle.btn-primary.focus, .open>.dropdown-toggle.btn-primary:focus, .open>.dropdown-toggle.btn-primary:hover {
+    color: #fff;
+    background-color: #a8000b;
+    border-color: transparent;
+}
+
+
+
+.profile_button{
+    margin: 20px 0 0 50px;
+}
+
+.profile_button button{
+    display: inline-block;
+    padding: 11px 20px;
+     color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+
+
+
+.page-head{
+    background: url(../../src/images/header.jpeg);
+    background-size: cover;
+    height: 150px;
+    background-position: center;
+    color: #FFF;
+}
+
+.page-head a {
+    color: #FFF;
+}
+
+.page-head h1 {
+    margin-top: 0;
+}
+
+.page-head .breadcrumb {
+    background: transparent;
+    padding: 8px 0;
+    margin-bottom: 5px;
+    margin-top: 20px;
+
+}
+
+.page-head .breadcrumb>.active {
+    color: #D7D8D6;
+}
+
+
+.mask{
+    height: 100%;
+    background: rgba(219, 0, 17, 0.4);
+
 }
