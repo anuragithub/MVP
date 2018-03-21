@@ -1,0 +1,14 @@
+<div>
+	<h4>Please enter your Success Factor credentials to continue</h4>
+	<div class="col-md-12 col-lg-12">
+		<div class="form-group">
+			<input type="text" class="form-control login-input-text" ng-model="username" placeholder="username" required=""/>
+		</div>
+		<div class="form-group">
+			<input type="password" class="form-control login-input-text" ng-model="password" placeholder="password" required=""/>
+		</div>
+		
+		<button ng-click="closeThisDialog()">Cancel</button>
+    	<button ng-click="confirm({username:username, password : password})">Confirm</button>
+	</div>
+</div>

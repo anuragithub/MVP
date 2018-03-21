@@ -1,0 +1,32 @@
+ <div class="container-fluid col-md-12 col-lg-12" style="margin-top:1rem; background-color: #E0E0E0;">
+    <div class="panel-default" style="background-color: #E0E0E0;">
+        <div class="panel-body">
+            <div class="col-lg-12"> 
+                <p>RCM Workbook to XML Generator</p> 
+
+                <div class="col-md-4 col-lg-4 input-group" style="margin-top: 1.5rem; margin-bottom : 1rem;">
+                  <input type="search" id="search" class="form-control" ng-model="search.tempname" placeholder="Search for...">
+                </div>
+
+                <div dir-paginate="tempdata in templateDataArray | filter:search |itemsPerPage:18" pagination-id="datavalidation" class="col-sm-3 col-md-2" >
+                
+                    <div class="thumbnail"> 
+                        <div class="caption padding-top-0">
+                            <h6>
+                                <a ui-sref=".uploadtemplate({templateName:tempdata.tempname, blnCompareFiles:tempdata.blnCompareFile})" style="color:olive; cursor: pointer;">{{tempdata.tempname}}</a>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-12">
+                    <dir-pagination-controls pagination-id="datavalidation"
+                        max-size="5"
+                        direction-links="true"
+                        boundary-links="true" >
+                    </dir-pagination-controls>
+                </div>
+                <div ui-view class="view-side-form"></div>
+            </div>
+        </div>
+    </div>
+</div>

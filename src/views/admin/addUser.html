@@ -1,0 +1,21 @@
+	<div id="top_bit">	
+	<form class="regi" > 
+        <div class="line">Add User</div>
+       
+		<input type="text" name="name" required placeholder="Please enter First Name" ng-model="firstname" />
+     	<input type="text" name="name" required placeholder="Please enter Last Name" ng-model="lastname" />
+  		<input type="text" name="name" required placeholder="Please enter User Name" ng-model="username" />
+  
+		<select required><option ng-repeat="value in companyIDList track by $index">{{value}}</option></select>
+      
+		<input type="text" name="name" required placeholder="Please enter Employee ID" ng-model="employeeID" />      
+		<input type="email" name="email" required placeholder="Please enter mail ID"  ng-model="emailID"/>
+        <input type="password" placeholder="Please enter Password" id="password" required ng-model="password"/>
+        <input type="password" placeholder="Please enter Confirm Password" id="confirm_password" required ng-model="confirmPassword"/>       
+	
+        <button type="button" class="btn btn-primary" ng-click="backbtn()">Cancel</button>
+        <button type="submit" class="btn btn-primary pull-right" >Submit</button>
+        
+        
+			</form>
+        </div>	

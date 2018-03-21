@@ -1,0 +1,31 @@
+[{
+    "records": [{
+        "Name": "Naveen kumar SK",
+        "FirstName": "Naveen",
+        "LastName": "kumar",
+        "CompanyID": "ACC1919",
+        "EmpoyeeID": "92929",
+        "Role": "Administrator"
+    }, {
+        "Name": "Maitreya",
+        "FirstName": "Maitreya",
+        "LastName": "",
+        "CompanyID": "ACC3339",
+        "EmpoyeeID": "32434",
+        "Role": "Super Administrator"
+    }, {
+        "Name": "Praveen",
+        "FirstName": "Praveen",
+        "LastName": "kumar",
+        "CompanyID": "CHE2929",
+        "EmpoyeeID": "323442",
+        "Role": "User"
+    }, {
+        "Name": "Shiva",
+        "FirstName": "Shiva",
+        "LastName": "kumar",
+        "CompanyID": "BDE2929",
+        "EmpoyeeID": "4823434",
+        "Role": "User"
+    }]
+}]

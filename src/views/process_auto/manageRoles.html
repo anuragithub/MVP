@@ -1,0 +1,30 @@
+<div class="col-lg-12">
+	<h3>Manage Permission Roles</h3>
+	<p>This page allows you to upload the <strong>Manage Permission Roles</strong> to Success Factor. Click on the 'Browse' button to select the Manage Permission Roles Template. Click the 'Submit' button to upload the template to SuccessFactor.</p>
+	
+	<div style="min-height: 330px;">
+		<input style="margin-top: 2rem;" type="file" ngf-select ng-model="file" name="file">
+        <button  class="btn btn-primary" style="margin-top: 1rem;" ng-click="openSFDialog()">Submit</button>
+		<div ng-show="emailuploadStatus" style="padding-top: 2rem;">
+			<p>Process Automation is in progress</p>
+			<div class="spinner">
+			  <div class="rect1"></div>
+			  <div class="rect2"></div>
+			  <div class="rect3"></div>
+			  <div class="rect4"></div>
+			  <div class="rect5"></div>
+			</div>
+		</div>
+		<div class="alert" role="alert" ng-show="reultEmailMsg" style="margin-top: 1.5rem; background-color: lemonchiffon;">
+			Manage Permission Role Creation Executed successfully. Please use below link to download output file.
+			<div>
+				<ul>
+					<li><a href="{{ resDataFilePath }}">{{ resDataFile }}</a></li>
+				</ul>    
+			</div>
+		</div>
+		<div class="alert" role="alert" ng-show="reultEmailMsgErr" style="margin-top: 1.5rem; background-color: #FC5D4A;">
+        	Manage Permission Role Creation Error!
+        </div>
+	</div>
+</div>

@@ -1,0 +1,543 @@
+<div class="container col-md-12 col-lg-12">
+    <img src="images/homepage-header.png"/>
+</div>
+<div class="container-fluid col-md-12 col-lg-12" style="margin-top:1rem;" ng-init="tab = 'tab1'">
+    <P style="margin-left: 10px;">Welcome {{username}} !
+    <a class="pull-right" ng-click="logout()">logout</a></P>
+
+    <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" ng-click="tab = 'tab1'">DATA VALIDATION</a></li>
+    <li><a data-toggle="tab"  ng-click="tab = 'tab2'">PROCESS AUTOMATION</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="item1" ng-show="tab == 'tab1'">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="col-lg-12"> 
+                    <h4>Data Validation / Step 1 - Template Selection</h4>
+                    <p>Use the data validation tab to validate the templates. You can navigate through the available list of templates or search for the required template for quick use.</p>
+                    <div class="col-md-4 col-lg-4 input-group" style="margin-top: 1.5rem; margin-bottom : 1.5rem;">
+                            <label >Search</label>
+                            <input type="text" ng-model="search.projectTitle" class="form-control" placeholder="Search...">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Go!</button>
+                      </span>
+                    </div>
+
+                    <div ng-repeat='tempdata in templateDataArray |  filter:search' class="col-sm-6 col-md-3">
+                        <div class="thumbnail"> 
+                            <div class="caption">
+                                <h3>
+                                    <a ng-click="loadTemplate(tempdata)" style="color:olive; cursor: pointer;">{{tempdata.projectTitle}}</a>
+                                </h3>
+                                <div><p>{{tempdata.projectDescription}}</p></div>
+                                <div class="pull-right glyphicon glyphicon-remove-sign" ng-show="setFlag.deleteicon" ng-click="logout()"></div>
+                                <div class="glyphicon-padding-right pright5 pull-right glyphicon glyphicon-pencil" ng-show="setFlag.editicon" ng-click="logout()"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="items" ng-show="tab == 'tab2'">
+      <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="col-lg-12"> 
+                    <h4>Process Automation / Step 1 - Template Selection</h4>
+                    <p>Use the Process Automation tab to process the templates. You can navigate through the available list of templates or search for the required template for quick use.</p>
+                    <div class="col-md-4 col-lg-4 input-group" style="margin-top: 1.5rem; margin-bottom : 1.5rem;">
+                      <input type="search" id="search" class="form-control" ng-model="searchString" placeholder="Search for...">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Go!</button>
+                      </span>
+                    </div>
+                    <div ng-repeat='tempdata in templateDataArray |  searchFor:searchString' class="col-sm-6 col-md-3">
+                        <div class="thumbnail"> 
+                            <div class="caption">
+                                <h3>
+                                    <a ng-click="loadTemplate(tempdata)" style="color:olive; cursor: pointer;">{{tempdata.projectTitle}}</a>
+                                </h3>
+                                <div><p>{{tempdata.projectDescription}}</p></div>
+                                <div class="pull-right glyphicon glyphicon-remove-sign" ng-show="setFlag.deleteicon" ng-click="logout()"></div>
+                                <div class="glyphicon-padding-right pright5 pull-right glyphicon glyphicon-pencil" ng-show="setFlag.editicon" ng-click="logout()"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-12 heading ">
+               <h2>Naveen kumar SK</h2>
+               <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h6>
+            </div>
+         </div>
+      </div>
+      <div class="container">
+         <div class="col-lg-12">
+            <div class="panel panel-default">
+               <div class="panel-body">
+                  <div class="col-lg-12">
+                     <h4>Data Validation / Step 1 - Template Selection</h4>
+                     <p>Use the data validation tab to validate the templates. You can navigate through the available list of templates or search for the required template for quick use.</p>
+                     <div class="col-md-4 col-lg-4 input-group" style="margin-top: 1.5rem; margin-bottom : 1.5rem;">
+                        <input id="search" class="form-control ng-pristine ng-valid" ng-model="searchString" placeholder="Search for..." type="search">
+                        <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Go!</button>
+                        </span>
+                     </div>
+                     <!-- ngRepeat: tempdata in templateDataArray |  searchFor:searchString -->
+                     <div ng-repeat="tempdata in templateDataArray |  searchFor:searchString" class="col-sm-6 col-md-3 ng-scope">
+                        <div class="thumbnail">
+                           <div class="caption">
+                              <h3>
+                                 <a ng-click="loadTemplate(tempdata)" style="color:olive; cursor: pointer;" class="ng-binding">Template 1</a>
+                              </h3>
+                              <div>
+                                 <p class="ng-binding">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                 <button class="btn btn-primary" id="myBtn"><span class="fa fa-edit">Edit</span></button>
+                              </div>
+                              <!--
+                                 <div class="pull-right glyphicon glyphicon-remove-sign"></div>
+                                 <div class="glyphicon-padding-right pright5 pull-right glyphicon glyphicon-pencil"></div>
+                                 -->
+                           </div>
+                        </div>
+                     </div>
+                     <!-- end ngRepeat: tempdata in templateDataArray |  searchFor:searchString -->
+                     <div ng-repeat="tempdata in templateDataArray |  searchFor:searchString" class="col-sm-6 col-md-3 ng-scope">
+                        <div class="thumbnail">
+                           <div class="caption">
+                              <h3>
+                                 <a ng-click="loadTemplate(tempdata)" style="color:olive; cursor: pointer;" class="ng-binding">HR Resource template 2</a>
+                              </h3>
+                              <div>
+                                 <p class="ng-binding">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                 <button class="btn btn-primary disabled" id="myBtn"><span class="fa fa-edit">Edit</span></button>
+                              </div>
+                              <!--
+                                 <div class="pull-right glyphicon glyphicon-remove-sign"></div>
+                                 <div class="glyphicon-padding-right pright5 pull-right glyphicon glyphicon-pencil"></div>
+                                 -->
+                           </div>
+                        </div>
+                     </div>
+                     <!-- end ngRepeat: tempdata in templateDataArray |  searchFor:searchString -->
+                     <div ng-repeat="tempdata in templateDataArray |  searchFor:searchString" class="col-sm-6 col-md-3 ng-scope">
+                        <div class="thumbnail">
+                           <div class="caption">
+                              <h3>
+                                 <a ng-click="loadTemplate(tempdata)" style="color:olive; cursor: pointer;" class="ng-binding">My new template 3</a>
+                              </h3>
+                              <div>
+                                 <p class="ng-binding">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                 <button class="btn btn-primary disabled" id="myBtn"><span class="fa fa-edit">Edit</span></button>
+                              </div>
+                              <!--
+                                 <div class="pull-right glyphicon glyphicon-remove-sign"></div>
+                                 <div class="glyphicon-padding-right pright5 pull-right glyphicon glyphicon-pencil"></div>
+                                 -->
+                           </div>
+                        </div>
+                     </div>
+                     <!-- end ngRepeat: tempdata in templateDataArray |  searchFor:searchString -->
+                     <div ng-repeat="tempdata in templateDataArray |  searchFor:searchString" class="col-sm-6 col-md-3 ng-scope">
+                        <div class="thumbnail">
+                           <div class="caption">
+                              <h3>
+                                 <a ng-click="loadTemplate(tempdata)" style="color:olive; cursor: pointer;" class="ng-binding">Template 4</a>
+                              </h3>
+                              <div>
+                                 <p class="ng-binding">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                 <button class="btn btn-primary disabled" id="myBtn"><span class="fa fa-edit">Edit</span></button>
+                              </div>
+                              <!--
+                                 <div class="pull-right glyphicon glyphicon-remove-sign"></div>
+                                 <div class="glyphicon-padding-right pright5 pull-right glyphicon glyphicon-pencil"></div>
+                                 -->
+                           </div>
+                        </div>
+                     </div>
+                     <!-- end ngRepeat: tempdata in templateDataArray |  searchFor:searchString -->
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+         <!-- Modal content -->
+         <div class="modal-content">
+            <span class="close">×</span>
+            <!-- Page Content -->
+            <div class="modelpopup container ">
+               <h1> </h1>
+               <div id="dataTables-example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                  <div class="row">
+                     <div class="col-sm-6">
+                        <div class="dataTables_length" id="dataTables-example_length">
+                           <label>
+                              Show 
+                              <select name="dataTables-example_length" aria-controls="dataTables-example" class="form-control input-sm">
+                                 <option value="10">10</option>
+                                 <option value="25">25</option>
+                                 <option value="50">50</option>
+                                 <option value="100">100</option>
+                              </select>
+                              entries
+                           </label>
+                        </div>
+                     </div>
+                     <div class="col-sm-6">
+                        <div id="dataTables-example_filter" class="dataTables_filter"><label>Search:<input class="form-control input-sm" placeholder="" aria-controls="dataTables-example" type="search"></label></div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-sm-12 table_over">
+                        <table class="table table-striped table-bordered table-hover dataTable no-footer dtr-inline" id="dataTables-example" role="grid" aria-describedby="dataTables-example_info" style="width: 100%;" width="100%">
+                           <thead>
+                              <tr role="row">
+                                 <th> </th>
+                                 <th class="sorting_asc" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1"  aria-label="Rendering engine: activate to sort column descending" aria-sort="ascending">Technical Name</th>
+                                 <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1"  aria-label="Browser: activate to sort column ascending">Mandatory</th>
+                                 <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 185px;" aria-label="Platform(s): activate to sort column ascending">Data Type</th>
+                                 <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Date Format</th>
+                                 <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1"  aria-label="CSS grade: activate to sort column ascending">Date Length</th>
+                                 <th>F4Selection </th>
+                                 <th>Picklist</th>
+                                 <th>Special Character </th>
+                                 <th>Language Check</th>
+                                 <th>Languages</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr class="gradeA odd" role="row">
+                                 <td><input value="" type="checkbox"> </td>
+                                 <td class="sorting_1">User ID</td>
+                                 <td>
+                                    <div class="onoffswitch">
+                                       <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                                       <label class="onoffswitch-label" for="myonoffswitch">
+                                       <span class="onoffswitch-inner"></span>
+                                       <span class="onoffswitch-switch"></span>
+                                       </label>
+                                    </div>
+                                 </td>
+                                 <td>
+                                    <div class="form-group">
+                                       <select class="form-control">
+                                          <option>String</option>
+                                          <option>Alpha numeric</option>
+                                          <option>Integer</option>
+                                          <option>Double</option>
+                                          <option>Date</option>
+                                       </select>
+                                    </div>
+                                 </td>
+                                 <td class="center">
+                                    <div class="form-group">
+                                       <select class="form-control">
+                                          <option>MM/DD/YYYY</option>
+                                          <option>DD/MM/YYYY</option>
+                                       </select>
+                                    </div>
+                                 </td>
+                                 <td><input class="form-control"> </td>
+                                 <td class="center">
+                                    <div class="onoffswitch">
+                                       <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                                       <label class="onoffswitch-label" for="myonoffswitch">
+                                       <span class="onoffswitch-inner"></span>
+                                       <span class="onoffswitch-switch"></span>
+                                       </label>
+                                    </div>
+                                 </td>
+                                 <td>
+                                    <div class="form-group">
+                                       <select class="form-control">
+                                          <option>ISOCountryList</option>
+                                          <option>Gender</option>
+                                          <option>ACADEMIC_TITLE</option>
+                                       </select>
+                                    </div>
+                                 </td>
+                                 <td>
+                                    <div class="onoffswitch">
+                                       <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="user" checked>
+                                       <label class="onoffswitch-label" for="myonoffswitch">
+                                       <span class="onoffswitch-inner"></span>
+                                       <span class="onoffswitch-switch"></span>
+                                       </label>
+                                    </div>
+                                 </td>
+                                 <td>
+                                    <div class="onoffswitch">
+                                       <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="user" checked>
+                                       <label class="onoffswitch-label" for="myonoffswitch">
+                                       <span class="onoffswitch-inner"></span>
+                                       <span class="onoffswitch-switch"></span>
+                                       </label>
+                                    </div>
+                                 </td>
+                                 <td>
+                                    <div class="form-group">
+                                       <select class="form-control">
+                                          <option>English</option>
+                                          <option>French</option>
+                                       </select>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr class="gradeA even" role="row">
+                                 <td><input value="" type="checkbox"> </td>
+                                 <td class="sorting_1">First Name</td>
+                                 <td>
+                                    <div class="onoffswitch">
+                                       <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                                       <label class="onoffswitch-label" for="myonoffswitch">
+                                       <span class="onoffswitch-inner"></span>
+                                       <span class="onoffswitch-switch"></span>
+                                       </label>
+                                    </div>
+                                 </td>
+                                 <td>
+                                    <div class="form-group">
+                                       <select class="form-control">
+                                          <option>String</option>
+                                          <option>Alpha numeric</option>
+                                          <option>Integer</option>
+                                          <option>Double</option>
+                                          <option>Date</option>
+                                       </select>
+                                    </div>
+                                 </td>
+                                 <td class="center">
+                                    <div class="form-group">
+                                       <select class="form-control">
+                                          <option>MM/DD/YYYY</option>
+                                          <option>DD/MM/YYYY</option>
+                                       </select>
+                                    </div>
+                                 </td>
+                                 <td><input class="form-control"> </td>
+                                 <td class="center">
+                                    <div class="onoffswitch">
+                                       <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                                       <label class="onoffswitch-label" for="myonoffswitch">
+                                       <span class="onoffswitch-inner"></span>
+                                       <span class="onoffswitch-switch"></span>
+                                       </label>
+                                    </div>
+                                 </td>
+                                 <td>
+                                    <div class="form-group">
+                                       <select class="form-control">
+                                          <option>ISOCountryList</option>
+                                          <option>Gender</option>
+                                          <option>ACADEMIC_TITLE</option>
+                                       </select>
+                                    </div>
+                                 </td>
+                                 <td>
+                                    <div class="onoffswitch">
+                                       <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="user" checked>
+                                       <label class="onoffswitch-label" for="myonoffswitch">
+                                       <span class="onoffswitch-inner"></span>
+                                       <span class="onoffswitch-switch"></span>
+                                       </label>
+                                    </div>
+                                 </td>
+                                 <td>
+                                    <div class="onoffswitch">
+                                       <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="user" checked>
+                                       <label class="onoffswitch-label" for="myonoffswitch">
+                                       <span class="onoffswitch-inner"></span>
+                                       <span class="onoffswitch-switch"></span>
+                                       </label>
+                                    </div>
+                                 </td>
+                                 <td>
+                                    <div class="form-group">
+                                       <select class="form-control">
+                                          <option>English</option>
+                                          <option>French</option>
+                                       </select>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr class="gradeA odd" role="row">
+                                 <td><input value="" type="checkbox"> </td>
+                                 <td class="sorting_1">User Name</td>
+                                 <td>
+                                    <div class="onoffswitch">
+                                       <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                                       <label class="onoffswitch-label" for="myonoffswitch">
+                                       <span class="onoffswitch-inner"></span>
+                                       <span class="onoffswitch-switch"></span>
+                                       </label>
+                                    </div>
+                                 </td>
+                                 <td>
+                                    <div class="form-group">
+                                       <select class="form-control">
+                                          <option>String</option>
+                                          <option>Alpha numeric</option>
+                                          <option>Integer</option>
+                                          <option>Double</option>
+                                          <option>Date</option>
+                                       </select>
+                                    </div>
+                                 </td>
+                                 <td class="center">
+                                    <div class="form-group">
+                                       <select class="form-control">
+                                          <option>MM/DD/YYYY</option>
+                                          <option>DD/MM/YYYY</option>
+                                       </select>
+                                    </div>
+                                 </td>
+                                 <td><input class="form-control"> </td>
+                                 <td class="center">
+                                    <div class="onoffswitch">
+                                       <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                                       <label class="onoffswitch-label" for="myonoffswitch">
+                                       <span class="onoffswitch-inner"></span>
+                                       <span class="onoffswitch-switch"></span>
+                                       </label>
+                                    </div>
+                                 </td>
+                                 <td>
+                                    <div class="form-group">
+                                       <select class="form-control">
+                                          <option>ISOCountryList</option>
+                                          <option>Gender</option>
+                                          <option>ACADEMIC_TITLE</option>
+                                       </select>
+                                    </div>
+                                 </td>
+                                 <td>
+                                    <div class="onoffswitch">
+                                       <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="user" checked>
+                                       <label class="onoffswitch-label" for="myonoffswitch">
+                                       <span class="onoffswitch-inner"></span>
+                                       <span class="onoffswitch-switch"></span>
+                                       </label>
+                                    </div>
+                                 </td>
+                                 <td>
+                                    <div class="onoffswitch">
+                                       <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="user" checked>
+                                       <label class="onoffswitch-label" for="myonoffswitch">
+                                       <span class="onoffswitch-inner"></span>
+                                       <span class="onoffswitch-switch"></span>
+                                       </label>
+                                    </div>
+                                 </td>
+                                 <td>
+                                    <div class="form-group">
+                                       <select class="form-control">
+                                          <option>English</option>
+                                          <option>French</option>
+                                       </select>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr class="gradeA even" role="row">
+                                 <td><input value="" type="checkbox"> </td>
+                                 <td class="sorting_1">Department</td>
+                                 <td>
+                                    <div class="onoffswitch">
+                                       <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                                       <label class="onoffswitch-label" for="myonoffswitch">
+                                       <span class="onoffswitch-inner"></span>
+                                       <span class="onoffswitch-switch"></span>
+                                       </label>
+                                    </div>
+                                 </td>
+                                 <td>
+                                    <div class="form-group">
+                                       <select class="form-control">
+                                          <option>String</option>
+                                          <option>Alpha numeric</option>
+                                          <option>Integer</option>
+                                          <option>Double</option>
+                                          <option>Date</option>
+                                       </select>
+                                    </div>
+                                 </td>
+                                 <td class="center">
+                                    <div class="form-group">
+                                       <select class="form-control">
+                                          <option>MM/DD/YYYY</option>
+                                          <option>DD/MM/YYYY</option>
+                                       </select>
+                                    </div>
+                                 </td>
+                                 <td><input class="form-control"> </td>
+                                 <td class="center">
+                                    <div class="onoffswitch">
+                                       <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                                       <label class="onoffswitch-label" for="myonoffswitch">
+                                       <span class="onoffswitch-inner"></span>
+                                       <span class="onoffswitch-switch"></span>
+                                       </label>
+                                    </div>
+                                 </td>
+                                 <td>
+                                    <div class="form-group">
+                                       <select class="form-control">
+                                          <option>ISOCountryList</option>
+                                          <option>Gender</option>
+                                          <option>ACADEMIC_TITLE</option>
+                                       </select>
+                                    </div>
+                                 </td>
+                                 <td>
+                                    <div class="onoffswitch">
+                                       <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="user" checked>
+                                       <label class="onoffswitch-label" for="myonoffswitch">
+                                       <span class="onoffswitch-inner"></span>
+                                       <span class="onoffswitch-switch"></span>
+                                       </label>
+                                    </div>
+                                 </td>
+                                 <td>
+                                    <div class="onoffswitch">
+                                       <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="user" checked>
+                                       <label class="onoffswitch-label" for="myonoffswitch">
+                                       <span class="onoffswitch-inner"></span>
+                                       <span class="onoffswitch-switch"></span>
+                                       </label>
+                                    </div>
+                                 </td>
+                                 <td>
+                                    <div class="form-group">
+                                       <select class="form-control">
+                                          <option>English</option>
+                                          <option>French</option>
+                                       </select>
+                                    </div>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     <div class="panel-body pull-right">    
+                        <button type="button" class="btn btn-primary">Cancel</button>   
+                        <button type="button" class="btn btn-success">Save</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>

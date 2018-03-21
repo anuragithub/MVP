@@ -1,0 +1,54 @@
+<div class="side-form">
+    <div class="content">
+         <div class="clearfix" style="margin-bottom: 10px;"> </div>
+          <h2>{{EditTemplateName}}</h2>
+            <table class="table table-striped table-bordered table-hover dataTable no-footer dtr-inline"  >
+               <tr>
+                  <th></th>
+                  <th>Technical Name</th>
+                  <th>Field Name</th>
+                  <th>Required</th>
+                  <th>Mandatory</th>
+                  <th>Data Type</th>
+                  <th>Date Format</th>
+                  <th>Data Lenght</th>
+                  <th>PickListName</th>
+                  <th>ReferenceListName</th>
+                  <th>MDFPickListName</th>
+                  <th>Special Character</th>
+                  <th>EmailFormatCheck</th>
+               </tr>
+               <tr ng-repeat="rows in homepageData.RowInformation">
+                  <td><input type="checkbox" ng-model = "x.isDelete" ng-click="disFunc()" ></td>
+                  <td><input type="text" value="{{ rows.TechnicalName }}" ng-model="rows.TechnicalName"></td>
+                  <td><input type="text" value="{{ rows.FieldName }}"  ng-model="rows.FieldName"></td>
+                  <td>
+						<select required ng-model="rows.Required">
+                  			<option ng-repeat="x in homepageData.RequiredValues">{{x}}</option>
+                  		</select>
+                  </td> 
+                  <td>
+                  	<select required ng-model="rows.Mandatory">
+                  		<option ng-repeat="x in homepageData.RequiredValues">{{x}}</option>
+                  	</select>
+                  </td> 
+                  <td><select ng-model="rows.DataType" required><option ng-repeat="x in homepageData.DataTypeValues">{{x}}</option></select></td> 
+                  <td><select ng-model="rows.DateFormat" required ng-if="rows.DataType == 'Date' "><option ng-repeat="x in homepageData.DateFormatValues" >{{x}}</option></select></td> 
+                  <td><input type="text" value="{{ rows.DataLenght }}"></td>
+                  <td><select ng-model="rows.PickListName" required><option ng-repeat="x in homepageData.picklistValues" >{{x}}</option></select></td> 
+                  <td><select ng-model="rows.ReferenceListName" required><option ng-repeat="x in homepageData.ReferenceListValues" >{{x}}</option></select></td> 
+                  <td><select ng-model="rows.MDFPickListName"   required><option ng-repeat="x in homepageData.MDFPickListValues" >{{x}}</option></select></td>
+                  <td><select ng-model="rows.SpecialCharacter"  required><option ng-repeat="x in homepageData.SpecialCharacterValues" >{{x}}</option></select></td> 
+                  <td><select ng-model="rows.EmailFormatCheck"  required><option ng-repeat="x in homepageData.EmailFormatCheckValues" >{{x}}</option></select></td>
+               </tr>
+            </table> 
+            <br>
+            {{homepageData}}
+            <br>
+        <div class="form-group">
+            <button  class="btn btn-primary" ng-click="update()">Update</button>
+            <button  class="btn btn-primary" ui-sref="home.datavalidation">CLOSE</button>
+        </div>
+    </div>
+    <div class="background"></div>
+</div>

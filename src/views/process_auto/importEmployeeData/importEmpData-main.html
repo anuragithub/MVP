@@ -1,0 +1,39 @@
+<div class="col-lg-12">
+	<h3>Import Employee Data</h3>
+	<p>This page allows you to upload the <strong>Employee Data</strong> to Success Factor. Click on the 'Browse' button to select templates and re-order the templates. Click the 'Batch Process' button to upload the template to SuccessFactor in the order defined.  </p>
+</div>
+<br>
+<div class="row">
+	<div class="col-md-3 col-lg-3">
+		<div class="process-panel-heading">
+            <h3 class="process-panel-title">Select Template(s) </h3>
+        </div>
+	    <input style="margin-top: 2rem;" type="file" ngf-select ng-model="file" name="file" ngf-multiple="true">
+	    <button  class="btn btn-primary" style="margin-top: 1rem;" ng-click="updateFileList();">Submit</button>
+	</div>
+    <div class="simpleDemo col-md-5 col-lg-5" ng-show="empTempSelected">
+        <div ng-repeat="(listName, list) in models.lists" class="col-md-12 col-lg-12">
+            <div class="panel">
+                <div class="process-panel-heading">
+                    <h3 class="process-panel-title">List of Files for Upload - </h3>
+                </div>
+                <div class="panel-body process-panel-body" ng-include="'src/views/process_auto/importEmployeeData/importEmpData-sub.html'"></div>
+            </div>
+        </div>
+    </div>
+    <div class="box box-grey box-padding col-md-4 col-lg-4" ng-show="empTempSelected">
+		<h5>Click on the 'Batch Process' button below to start importing data to Success Factor. You will be prompted to enter Success Factor credentials.</h5>
+		<button  class="btn btn-primary" style="margin-top: 1rem;" ng-click="openSFDialog()">Submit</button>
+		<div ng-show="uploadProgress" style="padding-top: 2rem;">
+			<p>Uploading and Validating input file </p>
+			<div class="spinner">
+				  <div class="rect1"></div>
+				  <div class="rect2"></div>
+				  <div class="rect3"></div>
+				  <div class="rect4"></div>
+				  <div class="rect5"></div>
+			</div>
+		</div>
+    </div>
+
+</div>

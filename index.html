@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- CSS (load bootstrap) -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/ng-dialog/css/ngDialog.css">
+    <link rel="stylesheet" href="node_modules/ng-dialog/css/ngDialog-theme-default.css">
+    <link rel="stylesheet" href="node_modules/angular-wizard/dist/angular-wizard.min.css">
+    <link rel="stylesheet" href="src/css/app.css">
+    <link rel="stylesheet" href="src/css/prism.css">
+    <link rel="stylesheet" href="src/css/drag-drop-list.css">
+    <link rel="stylesheet" href="src/css/simple.css">   
+</head>
+<body>
+	<div class="container" ng-app="myApp"><main ui-view></main></div>    
+	<!-- JS (load angular, ui-router, and our custom js file) -->
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular/angular-ui-router.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/ng-dialog/js/ngDialog.min.js"></script>
+     <script src="//node_modules/angular-animate/angular-animate.map.min.js"> </script>
+    <script src="app.js"></script>
+    
+	<!-- Model Jsons -->
+	<script src="src/js/model/templatepage.json"></script>
+	<script src="src/js/model/userdetails.json"></script>
+    <script src="src/js/model/workbookpagedetails.json"></script>
+    <script src="src/js/model/editpagetemplate.json"></script>
+    <script src="src/js/model/admindata.json"></script>
+    <script src="src/js/model/processtemplates.json"></script>
+    
+	<!-- Services -->
+	<script src="src/js/services/loginDetails.js"></script>
+	<script src="src/js/services/adminDetails.js"></script>
+    <script src="src/js/services/addUserDetails.js"></script>
+    <script src="src/js/services/editUserDetails.js"></script>
+    <script src="src/js/services/workbookDetails.js"></script>
+    <script src="src/js/services/editpageDetails.js"></script>
+    <script src="src/js/services/homepageDetails.js"></script>
+    <script src="src/js/services/autoProcessDetails.js"></script>
+
+    <!-- Controllers  -->
+    <script src="src/js/controller/loginController.js"></script>
+    <script src="src/js/controller/homepageController.js"></script>
+    <script src="src/js/controller/adminpageController.js"></script>
+    <script src="src/js/controller/addUserController.js"></script>
+    <script src="src/js/controller/editUserController.js"></script>
+    <script src="src/js/controller/createPageController.js"></script>
+    <script src="src/js/controller/WizardController.js"></script>
+	<script src="src/js/controller/ModalInstanceController.js"></script>
+	<script src="src/js/controller/ModalInstanceControllerXml.js"></script>
+	<script src="src/js/controller/dataValidationController.js"></script>
+	<script src="src/js/controller/processController.js"></script>
+	<script src="src/js/controller/permissionController.js"></script>
+	<script src="src/js/controller/roleController.js"></script>
+	<script src="src/js/controller/importEmpDataController.js"></script>
+	<script src="src/js/controller/workbookXmlController.js"></script>
+    <script src="src/js/controller/editPageController.js"></script>
+    <script src="src/js/controller/roleController.js"></script>
+	<script src="src/js/controller/ModalInstanceControllerXml.js"></script>
+    
+
+    
+    <script src="node_modules/ng-file-upload/dist/ng-file-upload-shim.min.js"></script> <!-- for no html5 browsers support -->
+    <script src="node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>
+	<script src="node_modules/angular-wizard/dist/angular-wizard.min.js"></script>
+	<script src="src/js/libs/directives/dirPagination.js"></script>
+	<script src="src/js/libs/dragDrop/angular-drag-and-drop-lists.min.js"></script>    
+	<script src="src/js/libs/prism/prism.js"></script>   
+</body>
+</html>

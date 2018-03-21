@@ -1,0 +1,36 @@
+[{
+    "homepageTitle": "H1 title of HOme page",
+    "companyIDList": [ "Select CompanyID", "ACC218282", "SE927929", "EE29239", "RR292929", "ACC528282", "SE9286929", "EE29399", "RR2942929", "TT9293292" ],
+    "user": [{
+        "userID": "1",
+        "username": "maitreya",
+        "firstName": "Maitreya",
+        "lastName": "Karandikar",
+        "password": "123",
+        "cmpID": "SFPART007209",
+        "empID": "323442",
+        "role": "admin",
+        "active": "y"
+
+    }, {
+        "userID": "2",
+        "username": "anurag",
+        "firstName": "Anurag",
+        "lastName": "Mishra",
+        "password": "123",
+        "cmpID":  "SFPART007209",
+        "empID": "323442",
+        "role": "admin",
+        "active": "y"
+    },{
+        "userID": "3",
+        "username": "prerit",
+        "firstName": "Prerit",
+        "lastName": "Mogre",
+        "password": "123",
+        "cmpID":  "SFPART007209",
+        "empID": "123456",
+        "role": "admin",
+        "active": "y"
+    }]
+}]

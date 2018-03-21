@@ -1,0 +1,40 @@
+<div class="homepage-wrapper container col-md-12 col-lg-12">
+	<div class="col-md-12 col-lg-12">
+		<h2 class="apptext">Robotic Process Automation</h2>
+	</div>
+	<div class="col-md-12 col-lg-12">
+		<div class="col-md-3 col-lg-3">
+			<P style="color: white;">Welcome {{userData.firstName}}
+				{{userData.lastName}} !</P>
+		</div>
+		<div class="col-md-7 col-lg-7">
+			<span style="color: white;">Company ID : {{userData.cmpID}}</span>
+		</div>
+		<div class="col-md-2 col-lg-2">
+			<a ng-click="logout()"><span
+				style="color: white; cursor: pointer;"
+				class="glyphicon glyphicon-log-out pull-right"></span></a>
+		</div>
+	</div>
+</div>
+<div class="container-fluid col-md-12 col-lg-12"
+	style="background-color: #e0e0e0;" ng-init="tab = 'tab1'">
+	<ul class="nav nav-tabs" style="margin-top: 1rem;">
+		<li class="active" data-toggle="tab"><a ng-click="tab = 'tab1';"
+			ui-sref=".datavalidation">DATA VALIDATION</a></li>
+		<li data-toggle="tab"><a
+			ng-click="tab = 'tab2'; processAutoClick();">PROCESS AUTOMATION</a></li>
+		<li data-toggle="tab"><a
+			ng-click="tab = 'tab3'; workbooktoXML();">WORKBOOK TO XML</a></li>
+	</ul>
+	<div class="tab-content">
+		<div id="tabview" ui-view></div>
+	</div>
+	<div>
+		<footer>
+			<center>
+				<p>Copyright &copy 2017 Accenture Solutions. All rights reserved.</p>
+			</center>
+		</footer>
+	</div>
+</div>

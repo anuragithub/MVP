@@ -1,0 +1,10 @@
+[
+    {
+        "templatepageSeeAlso" : [
+            {"tempname": "RCM CDM", "blnCompareFile":"true"},
+            {"tempname": "RCM CPT", "blnCompareFile":true},
+            {"tempname": "RCM Offer", "blnCompareFile": false},
+            {"tempname": "RCM JRDM", "blnCompareFile":false}
+        ]
+    } 
+]

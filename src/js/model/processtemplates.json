@@ -1,0 +1,18 @@
+[
+    {
+        "processTemplateList" : [
+            {
+                "processTemplateName": "Email",
+                "processDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "processTemplateName": "HR Template",
+                "processDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "processTemplateName": "Template 1",
+                "processDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            }
+        ]
+    }
+]

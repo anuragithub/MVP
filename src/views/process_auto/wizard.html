@@ -1,0 +1,32 @@
+<wizard on-finish="finishedWizard()"> 
+    <wz-step wz-title="Select Files">
+        <div class="col-md-12 col-lg-12" ng-controller="wizardController">
+		<h5>Choose the file for email template process, by clicking the Browser button</h5>
+            <input type="file" ngf-select ng-model="files" name="files" ngf-multiple="true" ng-click="getSelectedFileNames($files)">
+			<ul>
+				<li ng-repeat="f in files" style="font:smaller">
+					{{f.path}}
+				</li>
+			</ul>
+		</div>
+		
+		<div ng-repeat="filename in files" class="col-sm-6 col-md-3">
+			<div class="list-group col-lg-3 col-md-12 col-sm-12">
+				<span id="link1" ui-sref=".emailprocess" class="list-group-item">{{}}</span>
+			</div>
+		</div>
+
+		<div class="col-md-12 col-lg-12" style="margin-top:1rem; margin-bottom:1rem;">
+        	<input type="submit" class="btn btn-primary" wz-next value="Continue" />
+		</div>
+    </wz-step>
+    <wz-step wz-title="Re-order Template Files">
+        <h1>Continuing</h1>
+        <p>You have continued here!</p>
+        <input type="submit" wz-next value="Go on" />
+    </wz-step>
+    <wz-step wz-title="Batch Process">
+        <p>Even more steps!!</p>
+        <input type="submit" wz-next value="Finish now" />
+    </wz-step>
+</wizard>

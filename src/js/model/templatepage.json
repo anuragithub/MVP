@@ -1,0 +1,21 @@
+[
+    {
+        "templatepageSeeAlso" : [
+            {"tempname": "Basic Information", "blnCompareFile":"true"},
+            {"tempname": "Biografical Information", "blnCompareFile":true},
+            {"tempname": "Personal Information", "blnCompareFile": false},
+            {"tempname": "employment Information", "blnCompareFile":false},
+            {"tempname": "employment Information1", "blnCompareFile":false},
+            {"tempname": "employment Information2", "blnCompareFile":false},
+            {"tempname": "employment Information3", "blnCompareFile":false},
+            {"tempname": "employment Information4", "blnCompareFile":false},
+            {"tempname": "employment Information5", "blnCompareFile":false},
+            {"tempname": "employment Information6", "blnCompareFile":false},
+            {"tempname": "employment Information7", "blnCompareFile":false},
+            {"tempname": "employment Information8", "blnCompareFile":false},
+            {"tempname": "employment Information9", "blnCompareFile":false},
+            {"tempname": "employment Information10", "blnCompareFile":false},
+            {"tempname": "employment Information11", "blnCompareFile":false}
+        ]
+    }
+]

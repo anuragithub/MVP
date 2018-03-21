@@ -1,0 +1,69 @@
+[{
+    "DataTypeValues": ["String", "integer", "Alpha numeric", "Double", "Date"],
+    "RequiredValues": ["Yes", "No"],
+    "DateFormatValues": ["DD/MM/YYYY", "DD/YYYY/MM", "MM/DD/YYYY", "MM/YYYY/DD", "YYYY/DD/MM", "YYYY/MM/DD"],
+    "picklistValues":["Gender", "Namesuffix", "Department", "Job-code", "Division","Location", "ISOCountryList", "Salutation", "Currency", "ACADEMIC_TITLE"],
+    "ReferenceListValues":["Department", "Division", "Location", "Job-code", "Timezone","Currency","Country"],
+    "MDFPickListValues": ["Disc_type", "Penalty", "AndOr", "Changeeason", "CompanyMobile","CurrencyExchangeRateType", "EEO1CODE_USA", "EEO4CODE_USA", "EEO5CODE_USA", "EEO6CODE_USA"],
+    "SpecialCharacterValues": ["String", "integer", "Alpha numeric", "Double", "Date"],
+    "EmailFormatCheckValues": ["String", "integer", "Alpha numeric", "Double", "Date"],
+    "RowInformation": {
+        "1": {
+            "TechnicalName": "user-id",
+            "FieldName": "User ID",
+            "Required": "No",
+            "Mandatory": "No",
+            "DataType": "integer",
+            "DateFormat": "DD/MM/YYYY",
+            "DataLenght": "20",
+            "PickListName": "Division",
+            "ReferenceListName":"Location",
+            "MDFPickListName": "Penalty",
+            "SpecialCharacter":"integer",
+            "EmailFormatCheck":"integer",
+            "temp":"Test"
+        },
+        "2": {
+            "TechnicalName": "start-date",
+            "FieldName": "Event Date",
+            "Required": "No",
+            "Mandatory": "No",
+            "DataType": "integer",
+            "DateFormat": "DD/MM/YYYY",
+            "DataLenght": "20",
+            "PickListName": "Division",
+            "ReferenceListName":"Location",
+            "MDFPickListName": "CurrencyExchangeRateType",
+            "SpecialCharacter":"integer",
+            "EmailFormatCheck":"integer"
+        },
+        "3": {
+            "TechnicalName": "end-date",
+            "FieldName": "End Date",
+            "Required": "No",
+            "Mandatory": "No",
+            "DataType": "integer",
+            "DateFormat": "DD/MM/YYYY",
+            "DataLenght": "20",
+            "PickListName": "Division",
+            "ReferenceListName":"Location",
+            "MDFPickListName": "EEO4CODE_USA",
+            "SpecialCharacter":"integer",
+            "EmailFormatCheck":"Double"
+        },
+        "4": {
+            "TechnicalName": "address1",
+            "FieldName": "Address Line 1",
+            "Required": "No",
+            "Mandatory": "No",
+            "DataType": "integer",
+            "DateFormat": "DD/MM/YYYY",
+            "DataLenght": "20",
+            "PickListName": "Division",
+            "ReferenceListName":"Location",
+            "MDFPickListName": "Penalty",
+            "SpecialCharacter":"integer",
+            "EmailFormatCheck":"Double"
+        }
+    }
+}]

@@ -1,0 +1,29 @@
+<div class="wrapper container col-md-12 col-lg-12">
+	<div class="col-md-12 col-lg-12 login-heading-div">
+		<h2 class="apptext">Robotic Process Automation</h2>
+	</div>
+	<div class="col-md-12 col-lg-12 " style="padding-top:1rem; padding-bottom: 11rem;" >
+        <div class="col-md-4 col-lg-4"></div>
+        <div class="col-md-4 col-lg-4 login-panel">
+            <div class="login-box-heading">
+                <h5 style="color: rgba(255, 87, 34, 0.82);">Please enter your username and password to get started</h5>
+            </div>
+            <form ng-submit="formSubmit()" class="form" style="padding-top:0.5rem;">
+                <div class="form-group">
+                    <input type="text" class="form-control login-input-text" ng-model="username" placeholder="username" required=""/>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control login-input-text" ng-model="password" placeholder="password" required=""/>
+                </div> 
+                <button type="submit" class="btn btn-primary submit-button">Login</button>
+            </form>
+			
+        </div>
+        <div class="col-md-4 col-lg-4">
+			<div class="alert alert-danger" role="alert" ng-show="loginerror" style="margin-top:1rem; margin-right:6rem;">
+				<span class="glyphicon glyphicon-info-sign"></span> <strong>Login Error</strong>
+				<hr class="message-inner-separator">{{error}}
+			</div>
+		</div>
+    </div>
+</div>
